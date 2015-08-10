@@ -1,0 +1,79 @@
+/* SVG! */
+
+/* General styling for nav button. */
+.nav-button {
+  margin-top: 6rem;
+  width: 250px;
+}
+
+/* Alter your SVG. */
+#hamburger {
+  fill: #202020;
+}
+
+#hamburger:hover {
+  cursor: pointer;
+}
+
+/* Animate your SVG. */
+#ham-top,
+#ham-bottom {
+  transition: 0.2s ease-in-out;
+}
+
+#hamburger:hover #ham-top {
+  transform: translate(0px, -10px);
+}
+
+#hamburger:hover #ham-bottom {
+  transform: translate(0px, 10px);
+}
+
+/* Not necessary for presentation. */
+body {
+  margin: 0;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 1.3125rem;
+  line-height: 2.125rem;
+  color: hsl(0, 0%, 27%);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  flex: none;
+  max-width: 86%;
+}
+
+h1 {
+  margin: 4.25rem 0 2.125rem;
+  font-size: 3.5625rem;
+  color: hsl(17, 88%, 54%);
+}
+
+h2 {
+  margin: 2.125rem 0 2.125rem;
+  font-size: 2.3125rem;
+}
+
+p {
+  margin: 0 0 2.125rem;
+}
+
+ul {
+  padding-left: 1rem;
+}
+
+a,
+a:visited {
+  color: hsl(201, 88%, 53%);
+}
+
+a:hover {
+  color: hsl(17, 88%, 54%);
+}
+

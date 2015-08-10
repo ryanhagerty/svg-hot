@@ -1,0 +1,134 @@
+/* SVG! */
+
+/* General styling for nav button. */
+.nav-button {
+  margin-top: 6rem;
+  width: 250px;
+}
+
+/* Alter your SVG. */
+#hamburger {
+  fill: #202020;
+}
+
+#hamburger:hover {
+  cursor: pointer;
+}
+
+/* Animate your SVG. */
+
+/* Hover animation. */
+#ham-top,
+#ham-bottom {
+  transition: 0.2s ease-in-out;
+}
+
+#hamburger:hover #ham-top {
+  transform: translate(0px, -10px);
+}
+
+#hamburger:hover #ham-bottom {
+  transform: translate(0px, 10px);
+}
+
+/* Close button animation. */
+#ham-top,
+#ham-bottom {
+  transform: rotate(0deg) translate(0px, 0px);
+  transform-origin: center center;
+}
+
+#hamburger.open #ham-top,
+#hamburger.open #ham-bottom {
+  transition: 0.3s 0.3s ease-in-out;
+}
+
+#hamburger.open #ham-top {
+  transform: translate(0px, 45px) rotate(-135deg);
+}
+
+#hamburger.open #ham-bottom {
+  transform: translate(0px, -45px) rotate(135deg);
+}
+
+/* Line stroke animation. */
+#ham-mid-right {
+  stroke-dasharray: 125;
+  stroke-dashoffset: 30;
+  transition: 0.3s ease-out;
+}
+
+#ham-mid-left {
+  stroke-dasharray: 125;
+  stroke-dashoffset: -30;
+  transition: 0.3s ease-out;
+}
+
+#hamburger.open #ham-mid-right {
+  stroke-dashoffset: -105;
+}
+
+#hamburger.open #ham-mid-left {
+  stroke-dashoffset: 105;
+}
+
+#ham-top-box,
+#ham-bottom-box {
+  stroke-dashoffset: 440;
+  stroke-dasharray: 440;
+  transition: 0.6s 0.1s ease-out;
+}
+
+#hamburger.open #ham-top-box,
+#hamburger.open #ham-bottom-box {
+  stroke-dashoffset: 0;
+}
+
+/* Not necessary for presentation. */
+body {
+  margin: 0;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 1.3125rem;
+  line-height: 2.125rem;
+  color: hsl(0, 0%, 27%);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  flex: none;
+  max-width: 86%;
+}
+
+h1 {
+  margin: 4.25rem 0 2.125rem;
+  font-size: 3.5625rem;
+  color: hsl(17, 88%, 54%);
+}
+
+h2 {
+  margin: 2.125rem 0 2.125rem;
+  font-size: 2.3125rem;
+}
+
+p {
+  margin: 0 0 2.125rem;
+}
+
+ul {
+  padding-left: 1rem;
+}
+
+a,
+a:visited {
+  color: hsl(201, 88%, 53%);
+}
+
+a:hover {
+  color: hsl(17, 88%, 54%);
+}
+

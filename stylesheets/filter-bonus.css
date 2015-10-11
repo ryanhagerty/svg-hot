@@ -2,7 +2,6 @@
 
 /* General styling for nav button. */
 .nav-button {
-  position: relative;
   margin-top: 6rem;
   width: 250px;
 }
@@ -85,39 +84,19 @@
   stroke-dashoffset: 0;
 }
 
-/* Clipping. */
-.clipping {
+/* Filter Bonus. */
+.filter-bump {
   position: absolute;
-  z-index: -1;
-  top: 0;
-  background: dodgerblue;
-  width: 250px;
-  height: 200px;
-  -webkit-clip-path: url(#clipping);
-  /* You can also define clipping via CSS. */
-  /* clip-path: circle(cx="0.5" cy="0.5" r="1"); */
+  /* mix-blend-mode will only work if
+  * 'experimental Web Platform features'
+  *  is enabled under chrome://flags
+  */
+  mix-blend-mode: multiply;
 }
 
-circle {
-  transform: scale(0);
-  transform-origin: 50% 50%;
-}
-
-#hamburger.close circle {
-  animation: scale .3s ease-out forwards reverse;
-}
-
-#hamburger.open circle {
-  animation: scale .3s linear forwards;
-}
-
-@keyframes scale {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
-  }
+.filter-container {
+  margin-top: 6rem;
+  width: 500px;
 }
 
 /* Not necessary for presentation. */

@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SVG! | Filters</title>
+    <link href="stylesheets/filter-bonus.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="content">
+        <div class="filter-container">
+          <img src="images/stone2.jpg" width="500" height="500"
+          class="filter-bump" />
+
+          <svg version="1.1" id="hamburger" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+           viewBox="0 0 500 500">
+
+           <filter id="filter">
+              <feGaussianBlur in="SourceAlpha" stdDeviation="4" result="blur1"/>
+              <feSpecularLighting result="specOut" in="blur1" specularExponent="70" lighting-color = "#fff">
+                  <fePointLight x="340" y="180" z="150" />
+              </feSpecularLighting>
+              <feComposite in="SourceGraphic" in2="specOut" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" />
+          </filter>
+
+          <g filter = "url(#filter)">
+
+            <image xlink:href="images/stone1.jpg"
+            x="0" y="0" height="500" width="500" />
+
+          </g>
+
+          </svg>
+
+        </div>
+      </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/filter-bonus.js"></script>
+  </body>
+</html>
